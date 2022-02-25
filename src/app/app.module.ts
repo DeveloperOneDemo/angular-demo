@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { CopyComponent } from './copy/copy.component';
 import { CounterComponent } from './counter/counter.component';
 import { FormsModule } from '@angular/forms';
+import { ListFruitComponent } from './list-fruit/list-fruit.component';
+import { ListBookComponent } from './book/list-book/list-book.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { FormsModule } from '@angular/forms';
     DisplayComponent,
     HeaderComponent,
     CopyComponent,
-    CounterComponent
+    CounterComponent,
+    ListFruitComponent,
+    ListBookComponent
   ],
   imports: [
     BrowserModule,
