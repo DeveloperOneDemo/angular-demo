@@ -9,16 +9,23 @@
                 <th>Author</th>
                 <th>Genre</th>
                 <th>Cost</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let book of allBooks">
                 <td>{{ book.bookId }}</td>
-                <td><img [src]="book.bookImageUrl" width="150px" height="100px"/></td>
+                <td><img [src]="book.bookImageUrl" width="80px" height="50px"/></td>
                 <td>{{ book.bookTitle }}</td>
                 <td>{{ book.bookAuthor }}</td>
                 <td>{{ book.bookGenre }}</td>
                 <td>{{ book.bookCost }}</td>
+                <td><button type="button" class="btn btn-primary">Edit</button></td>
+                <td><button 
+                        type="button" 
+                        class="btn btn-danger" 
+                        (click)="deleteBook(book.bookId)">Delete</button></td>
             </tr>
         </tbody>
     </table>

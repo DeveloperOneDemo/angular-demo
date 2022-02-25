@@ -48,4 +48,13 @@ export class ListBookComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  deleteBook(bookId: any){
+    console.log(bookId);
+    for(let i=0; i<this.allBooks.length;i++){
+      if(this.allBooks[i].bookId == bookId){
+        this.allBooks.splice(i, 1);
+        break;
+      }
+    }
+  }
 }
