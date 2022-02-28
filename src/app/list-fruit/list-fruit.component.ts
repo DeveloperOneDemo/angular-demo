@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListFruitComponent implements OnInit {
 
-  allFruits = ["Apples", "Oranges", "Bananas"];
+  allFruits: string[] = ["Apples", "Oranges", "Bananas"];
 
   constructor() { }
 

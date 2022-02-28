@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayComponent implements OnInit {
 
-  movieName = "";
-  toggle = true;
+  movieName: string = "";
+  toggle: boolean = true;
 
   constructor() { }
 

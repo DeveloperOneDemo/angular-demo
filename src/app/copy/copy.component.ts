@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CopyComponent implements OnInit {
 
-  text1 = "";
-  text2 = "";
+  text1: string = "";
+  text2: string = "";
 
   constructor() { }
 
