@@ -10,7 +10,16 @@ import { BookService } from '../book.service';
 export class ListBookComponent implements OnInit {
 
   allBooks: Book[] = [];
+  toggleAdd: boolean = false;
 
+  newBook: Book = {
+    bookId: 0,
+    bookTitle: "",
+    bookAuthor: "",
+    bookGenre: "",
+    bookCost: 0,
+    bookImageUrl: ""
+  }
   //commenting this line because we can use private in front of the parameter
   //bookService: BookService;
 
@@ -66,7 +75,29 @@ export class ListBookComponent implements OnInit {
     this.allBooks = this.bookService.fetchAllBooks();
   }
 
+  toggleAddForm(){
+    if(this.toggleAdd){
+      this.toggleAdd = false;
+    }else{
+      this.toggleAdd = true;
+    }
+  }
+
   deleteBook(bookId: number){
    this.allBooks = this.bookService.deleteBook(bookId);
+  }
+
+  addBook(){
+    let addNewBook: Book = {
+      bookId: 0,
+      bookTitle: this.newBook.bookTitle,
+      bookAuthor:this.newBook.bookAuthor,
+      bookGenre: this.newBook.bookGenre,
+      bookCost: this.newBook.bookCost,
+      bookImageUrl: this.newBook.bookImageUrl
+    }
+
+    this.bookService.addBook(addNewBook);
+    this.allBooks = this.bookService.fetchAllBooks();
   }
 }
