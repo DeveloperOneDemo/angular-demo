@@ -89,11 +89,11 @@
                 <td>{{ book.bookAuthor }}</td>
                 <td>{{ book.bookGenre }}</td>
                 <td>{{ book.bookCost }}</td>
-                <td><button type="button" class="btn btn-primary">Edit</button></td>
+                <td><button type="button" class="btn btn-primary"><i class="material-icons">edit</i></button></td>
                 <td><button 
                         type="button" 
                         class="btn btn-danger" 
-                        (click)="deleteBook(book.bookId)">Delete</button></td>
+                        (click)="deleteBook(book.bookId)"><i class="material-icons">delete</i></button></td>
             </tr>
         </tbody>
     </table>

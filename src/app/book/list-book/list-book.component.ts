@@ -88,6 +88,7 @@ export class ListBookComponent implements OnInit {
   }
 
   addBook(){
+    // doing this because am working with arrays, otherwise not required
     let addNewBook: Book = {
       bookId: 0,
       bookTitle: this.newBook.bookTitle,
