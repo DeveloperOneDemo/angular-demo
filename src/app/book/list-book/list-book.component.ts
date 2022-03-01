@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Book } from '../book.model';
 import { BookService } from '../book.service';
 
@@ -24,7 +25,7 @@ export class ListBookComponent implements OnInit {
   //bookService: BookService;
 
   // Dependency Injection (DI)
-  constructor(private bookService: BookService) {
+  constructor(private bookService: BookService, private router: Router) {
     //commenting this line because we can use private in front of the parameter
     //this.bookService = bookService;
 
@@ -81,6 +82,12 @@ export class ListBookComponent implements OnInit {
     }else{
       this.toggleAdd = true;
     }
+  }
+
+  goToEditBook(bookId: number){
+    // here we have to route to EditBookComponent whose route path is edit-book
+    // to use this.router.navigate(), inject Router in the constructor
+    this.router.navigate(['book-edit', bookId]);
   }
 
   deleteBook(bookId: number){

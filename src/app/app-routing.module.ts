@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { EditBookComponent } from './book/edit-book/edit-book.component';
 import { ListBookComponent } from './book/list-book/list-book.component';
 import { CopyComponent } from './copy/copy.component';
 import { CounterComponent } from './counter/counter.component';
@@ -11,7 +12,8 @@ const routes: Routes = [
   { path: "copy", component: CopyComponent },
   { path: "counter", component: CounterComponent },
   { path: "list-fruit", component: ListFruitComponent },
-  { path: "book-crud", component: ListBookComponent }
+  { path: "book-crud", component: ListBookComponent },
+  { path: "book-edit/:myId", component: EditBookComponent }
 ];
 
 @NgModule({

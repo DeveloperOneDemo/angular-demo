@@ -10,6 +10,7 @@ import { CounterComponent } from './counter/counter.component';
 import { FormsModule } from '@angular/forms';
 import { ListFruitComponent } from './list-fruit/list-fruit.component';
 import { ListBookComponent } from './book/list-book/list-book.component';
+import { EditBookComponent } from './book/edit-book/edit-book.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ListBookComponent } from './book/list-book/list-book.component';
     CopyComponent,
     CounterComponent,
     ListFruitComponent,
-    ListBookComponent
+    ListBookComponent,
+    EditBookComponent
   ],
   imports: [
     BrowserModule,
