@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { Router } from '@angular/router';
 import { Book } from '../book.model';
 import { BookService } from '../book.service';
@@ -8,7 +8,7 @@ import { BookService } from '../book.service';
   templateUrl: './list-book.component.html',
   styleUrls: ['./list-book.component.css']
 })
-export class ListBookComponent implements OnInit {
+export class ListBookComponent implements OnInit, OnDestroy, OnChanges {
 
   allBooks: Book[] = [];
   toggleAdd: boolean = false;
@@ -74,6 +74,14 @@ export class ListBookComponent implements OnInit {
   
   ngOnInit(): void {
     this.allBooks = this.bookService.fetchAllBooks();
+  }
+
+  ngOnDestroy(): void {
+      console.log("ngOnDestroy() called");
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log("ngOnChanges() called");
   }
 
   toggleAddForm(){

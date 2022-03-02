@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { ListFruitComponent } from './list-fruit/list-fruit.component';
 import { ListBookComponent } from './book/list-book/list-book.component';
 import { EditBookComponent } from './book/edit-book/edit-book.component';
+import { LoginComponent } from './user/login/login.component';
+import { LogoutComponent } from './user/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { EditBookComponent } from './book/edit-book/edit-book.component';
     CounterComponent,
     ListFruitComponent,
     ListBookComponent,
-    EditBookComponent
+    EditBookComponent,
+    LoginComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
