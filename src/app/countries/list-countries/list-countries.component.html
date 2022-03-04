@@ -1,0 +1,7 @@
+
+<ol class="list-group list-group-numbered">
+    <!-- <li class="list-group-item" *ngFor="let country of allCountries" >{{ country }}</li> -->
+    <li class="list-group-item" *ngFor="let country of allCountries" >
+        <app-display-country [countryInfo]="country" (deleteEvent)="deleteInParent($event)"></app-display-country>
+    </li>
+</ol>

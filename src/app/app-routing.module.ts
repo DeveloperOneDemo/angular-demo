@@ -6,6 +6,7 @@ import { ListBookComponent } from './book/list-book/list-book.component';
 import { ListHttpBookComponent } from './book/list-http-book/list-http-book.component';
 import { CopyComponent } from './copy/copy.component';
 import { CounterComponent } from './counter/counter.component';
+import { ListCountriesComponent } from './countries/list-countries/list-countries.component';
 import { DisplayComponent } from './display/display.component';
 import { ListFruitComponent } from './list-fruit/list-fruit.component';
 import { AuthGuard } from './user/auth.guard';
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: "book-edit/:myId", component: EditBookComponent, canActivate: [AuthGuard] },
   { path: "book-http-edit/:myId", component: EditHttpBookComponent, canActivate: [AuthGuard] },
   { path: "login", component: LoginComponent },
-  { path: "logout", component: LogoutComponent }
+  { path: "logout", component: LogoutComponent },
+  { path: "list-countries", component: ListCountriesComponent },
 ];
 
 @NgModule({

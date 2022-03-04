@@ -16,6 +16,8 @@ import { LoginComponent } from './user/login/login.component';
 import { LogoutComponent } from './user/logout/logout.component';
 import { ListHttpBookComponent } from './book/list-http-book/list-http-book.component';
 import { EditHttpBookComponent } from './book/edit-http-book/edit-http-book.component';
+import { ListCountriesComponent } from './countries/list-countries/list-countries.component';
+import { DisplayCountryComponent } from './countries/list-countries/display-country/display-country.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { EditHttpBookComponent } from './book/edit-http-book/edit-http-book.comp
     LoginComponent,
     LogoutComponent,
     ListHttpBookComponent,
-    EditHttpBookComponent
+    EditHttpBookComponent,
+    ListCountriesComponent,
+    DisplayCountryComponent
   ],
   imports: [
     BrowserModule,
