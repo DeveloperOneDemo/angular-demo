@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,8 @@ import { ListBookComponent } from './book/list-book/list-book.component';
 import { EditBookComponent } from './book/edit-book/edit-book.component';
 import { LoginComponent } from './user/login/login.component';
 import { LogoutComponent } from './user/logout/logout.component';
+import { ListHttpBookComponent } from './book/list-http-book/list-http-book.component';
+import { EditHttpBookComponent } from './book/edit-http-book/edit-http-book.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +28,15 @@ import { LogoutComponent } from './user/logout/logout.component';
     ListBookComponent,
     EditBookComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    ListHttpBookComponent,
+    EditHttpBookComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
